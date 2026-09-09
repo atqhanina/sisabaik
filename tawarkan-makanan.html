@@ -8,6 +8,7 @@
   content="Formulir prototipe untuk mencatat makanan berlebih yang akan ditawarkan melalui SisaBaik."
   >
   <title>Tawarkan Makanan | SisaBaik</title>
+  <link rel="stylesheet" href="styles.css">
   </head>
 
   <body>
@@ -58,7 +59,6 @@
   required
   >
   </p>
-
   <p>
   <label for="kategori">Kategori *</label><br>
   <select id="kategori" name="kategori" required>
@@ -71,7 +71,6 @@
   <option value="lainnya">Lainnya</option>
   </select>
   </p>
-
   <p>
   <label for="deskripsi-makanan">Deskripsi kondisi makanan *</label><br>
   <textarea
@@ -89,10 +88,8 @@
   </small>
   </p>
   </fieldset>
-
   <fieldset>
   <legend>Jumlah dan skema pemulihan nilai</legend>
-
   <p>
   <label for="jumlah">Jumlah tersedia *</label><br>
   <input
@@ -105,7 +102,6 @@
   required
   >
   </p>
-
   <p>
   <label for="satuan">Satuan *</label><br>
   <select id="satuan" name="satuan" required>
@@ -117,7 +113,6 @@
   <option value="liter">Liter</option>
   </select>
   </p>
-
   <p>
   <label for="harga-normal">Harga normal per satuan (rupiah) *</label><br>
   <input
@@ -133,7 +128,6 @@
 
   <fieldset>
   <legend>Jenis penawaran *</legend>
-
   <p>
   <input
   type="radio"
@@ -155,7 +149,6 @@
   <label for="jenis-donasi">Disalurkan tanpa biaya</label>
   </p>
   </fieldset>
-
   <p>
   <label for="harga-pemulihan">Harga penawaran per satuan (rupiah) *</label><br>
   <input
@@ -168,7 +161,6 @@
   aria-describedby="bantuan-harga"
   required
   ><br>
-
   <small id="bantuan-harga">
   Isi 0 jika makanan disalurkan tanpa biaya. Perbandingan dengan
   harga normal akan divalidasi menggunakan JavaScript pada chapter berikutnya.
@@ -178,7 +170,6 @@
 
   <fieldset>
   <legend>Keamanan dan pengambilan</legend>
-
   <p>
   <label for="batas-pengambilan">Batas waktu pengambilan *</label><br>
   <input
@@ -188,7 +179,6 @@
   required
   >
   </p>
-
   <p>
   <label for="petunjuk-penyimpanan">Petunjuk penyimpanan *</label><br>
   <textarea
@@ -200,31 +190,25 @@
   required
   ></textarea>
   </p>
-
   <fieldset>
   <legend>Informasi alergen yang diketahui</legend>
-
   <p>
   <input type="checkbox" id="alergen-gluten" name="alergen" value="gluten">
   <label for="alergen-gluten">Gluten</label>
   </p>
-
   <p>
   <input type="checkbox" id="alergen-susu" name="alergen" value="susu">
   <label for="alergen-susu">Susu</label>
   </p>
-
   <p>
   <input type="checkbox" id="alergen-telur" name="alergen" value="telur">
   <label for="alergen-telur">Telur</label>
   </p>
-
   <p>
   <input type="checkbox" id="alergen-kacang" name="alergen" value="kacang">
   <label for="alergen-kacang">Kacang</label>
   </p>
   </fieldset>
-
   <p>
   <label for="lokasi-pengambilan">Lokasi pengambilan *</label><br>
   <textarea
@@ -238,10 +222,8 @@
   ></textarea>
   </p>
   </fieldset>
-
   <fieldset>
   <legend>Konfirmasi keamanan pangan</legend>
-
   <p>
   <input
   type="checkbox"
@@ -256,7 +238,6 @@
   </label>
   </p>
   </fieldset>
-
   <p>
   <button type="submit">Kirim penawaran latihan</button>
   <button type="reset">Kosongkan formulir</button>
