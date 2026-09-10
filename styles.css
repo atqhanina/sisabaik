@@ -1,15 +1,15 @@
 :root {
-  --color-primary: #6b4c17;
-  --color-primary-dark: #4f350f;
-  --color-primary-soft: #bfa466;
-  --color-accent: #f2b84b;
-  --color-text: #1a1721;
-  --color-muted: #525261;
+--color-primary: #7f0508;
+  --color-primary-dark: #580305;
+  --color-primary-soft: #ece6df;
+  --color-accent: #0f3f49;
+  --color-text: #1a1a1a;
+  --color-muted: #4a4a4a;
   --color-surface: #ffffff;
-  --color-background: #e9c67f;
-  --color-border: #d8d2cb;
-  --color-danger: #a52a2a;
-  --shadow-card: 0 0.5rem 1.5rem rgb(23 33 27 / 10%);
+  --color-background: #ece6df;
+  --color-border: #d5cdcf;
+  --color-danger: #7f0508;
+  --shadow-card: 0 4px 12px rgba(127, 5, 8, 0.06);
   --radius-small: 0.5rem;
   --radius-medium: 0.9rem;
   --radius-large: 1.4rem;
@@ -140,7 +140,7 @@ a:hover {
 
 .hero {
   padding-block: clamp(3rem, 10vw, 7rem);
-  background: linear-gradient(105deg, rgb(232 233 245 / 85%), rgb(255 255 255 / 96%));
+  background: var(--color-background);
 }
 
 .hero-layout {
@@ -214,7 +214,7 @@ a:hover {
 }
 
 .section-alt {
-  background: var(--color-surface);
+  background: #f7f4f0;
 }
 
 .section-intro {
@@ -262,8 +262,7 @@ a:hover {
 
 .offer-card__visual {
   min-height: 8rem;
-  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
-}
+  background: var(--color-primary);}
 
 .offer-card__content {
   display: flex;
