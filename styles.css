@@ -1,13 +1,13 @@
 :root {
-  --color-primary: #176b4d;
-  --color-primary-dark: #0f4f39;
-  --color-primary-soft: #e8f5ef;
+  --color-primary: #6b4c17;
+  --color-primary-dark: #4f350f;
+  --color-primary-soft: #bfa466;
   --color-accent: #f2b84b;
-  --color-text: #17211b;
-  --color-muted: #52615a;
+  --color-text: #1a1721;
+  --color-muted: #525261;
   --color-surface: #ffffff;
-  --color-background: #f5f8f6;
-  --color-border: #cbd8d1;
+  --color-background: #e9c67f;
+  --color-border: #d8d2cb;
   --color-danger: #a52a2a;
   --shadow-card: 0 0.5rem 1.5rem rgb(23 33 27 / 10%);
   --radius-small: 0.5rem;
@@ -140,7 +140,7 @@ a:hover {
 
 .hero {
   padding-block: clamp(3rem, 10vw, 7rem);
-  background: linear-gradient(135deg, rgb(232 245 239 / 95%), rgb(255 255 255 / 92%));
+  background: linear-gradient(105deg, rgb(232 233 245 / 85%), rgb(255 255 255 / 96%));
 }
 
 .hero-layout {
