@@ -1,11 +1,11 @@
 :root {
   --color-primary: #1D2A44;
   --color-primary-dark: #131C2E;
-  --color-primary-soft: #2C3E61;
+  --color-primary-soft: #E8ECF3;
   --color-accent: #D4AF37;
   --color-text: #1D2A44;
   --color-muted: #4A5568;
-  --color-surface: #1D2A44;
+  --color-surface: #FDFBF7;
   --color-surface-text: #FDFBF7;
   --color-background: #EFEAD8;
   --color-border: #C8BF9D;
@@ -170,7 +170,7 @@ a:hover {
   border: 0.0625rem solid var(--color-primary-soft);
   border-radius: var(--radius-large);
   background: var(--color-surface);
-  color: var(--color-surface-text);
+  color: var(--color-text);
   box-shadow: var(--shadow-card);
 }
 
@@ -241,11 +241,14 @@ a:hover {
 
 .card {
   padding: 1.25rem;
-  border: 0.0625rem solid var(--color-primary-soft);
+  border: 0.0625rem solid var(--color-border);
   border-radius: var(--radius-medium);
   background: var(--color-surface);
-  color: var(--color-surface-text);
+  color: var(--color-text);
   box-shadow: var(--shadow-card);
+}
+.card p{
+  color: var(--color-muted);
 }
 
 .step-number {
@@ -264,16 +267,16 @@ a:hover {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  border: 0.0625rem solid var(--color-primary-soft);
+  border: 0.0625rem solid var(--color-border);
   border-radius: var(--radius-medium);
   background: var(--color-surface);
-  color: var(--color-surface-text);
+  color: var(--color-text);
   box-shadow: var(--shadow-card);
 }
 
 .offer-card__visual {
   min-height: 8rem;
-  background: linear-gradient(135deg, #C8BF9D, #E5DFC8);
+  background: linear-gradient(135deg,var(--color-primary),var(--color-primary-dark));
 }
 
 .offer-card__content {
@@ -284,13 +287,13 @@ a:hover {
 }
 
 .offer-card__meta {
-  color: #CBD5E0;
+  color: var(--color-muted);
 }
 
 .offer-card__price {
   margin-block-start: auto;
   font-size: 1.15rem;
-  color: var(--color-surface-text);
+  color: var(--color-text);
 }
 
 .offer-card__price strong {
@@ -304,21 +307,21 @@ a:hover {
   padding: 0.25rem 0.6rem;
   border-radius: 999px;
   background: var(--color-primary-soft);
-  color: #FDFBF7;
+  color: var(--color-primary-dark);
   font-size: 0.85rem;
   font-weight: 700;
 }
 
 .notice {
   padding: 1rem;
-  border-inline-start: 0.3rem solid var(--color-accent);
+  border-inline-start: 0.3rem solid var(--color-primary);
   border-radius: var(--radius-small);
-  background: var(--color-surface);
-  color: var(--color-surface-text);
+  background: var(--color-primary-soft);
+  color: var(--color-text);
 }
 
 .notice h2 {
-  color: var(--color-accent);
+  color: var(--color-primary-dark);
 }
 
 .page-heading {
@@ -332,7 +335,7 @@ a:hover {
   border: 0.0625rem solid var(--color-primary-soft);
   border-radius: var(--radius-large);
   background: var(--color-surface);
-  color: var(--color-surface-text);
+  color: var(--color-text);
   box-shadow: var(--shadow-card);
 }
 
@@ -345,7 +348,7 @@ a:hover {
 
 .form-section legend {
   padding-inline: 0.4rem;
-  color: var(--color-accent);
+  color: var(--color-primary-dark);
   font-size: 1.1rem;
   font-weight: 700;
 }
@@ -354,7 +357,7 @@ label {
   display: inline-block;
   margin-block-end: 0.35rem;
   font-weight: 700;
-  color: var(--color-surface-text);
+  color: var(--color-primary-dark);
 }
 
 input,
@@ -362,7 +365,7 @@ select,
 textarea {
   width: 100%;
   padding: 0.7rem 0.75rem;
-  border: 0.0625rem solid var(--color-primary-soft);
+  border: 0.0625rem solid var(--color-border);
   border-radius: var(--radius-small);
   background: #FDFBF7;
   color: var(--color-primary-dark);
@@ -449,5 +452,40 @@ input[type="radio"] {
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+}
+.filter-panel {
+  display: grid;
+  gap: 1rem;
+  margin-block: 1.5rem;
+  padding: 1rem;
+  border: 0.0625rem solid var(--color-border);
+  border-radius: var(--radius-medium);
+  background: var(--color-primary);
+}
+.filter-panel p {
+  margin: 0;
+}
+
+.filter-panel label {
+  color: var(--color-surface-text);
+}
+.status-message{
+  min-height: 1.6em;
+  color: var(--color-muted);
+}
+.cart-summary {
+margin-block-start: 1.5rem;
+  padding: 1rem;
+  border-radius: var(--radius-medium);
+  background: var(--color-surface);
+}
+.error-message {
+  color: var(--color-danger);
+  font-weight: 700;
+}
+@media (min-width: 48rem) {
+  .filter-panel {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
