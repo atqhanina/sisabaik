@@ -1,7 +1,7 @@
 :root {
   --color-primary: #1D2A44;
   --color-primary-dark: #131C2E;
-  --color-primary-soft: #E8ECF3;
+  --color-primary-soft: #E8ECF1;
   --color-accent: #D4AF37;
   --color-text: #1D2A44;
   --color-muted: #4A5568;
@@ -66,7 +66,7 @@ h3 {
 }
 
 a {
-  color: var(--color-primary);
+  color: var(--color-primary-dark);
   text-underline-offset: 0.2em;
 }
 
@@ -86,8 +86,8 @@ a:hover {
   z-index: 100;
   padding: 0.7rem 1rem;
   border-radius: var(--radius-small);
-  background: var(--color-primary-dark);
-  color: var(--color-surface-text);
+  background: var(--color-text);
+  color: var(--color-surface);
   transform: translateY(-180%);
 }
 
@@ -101,7 +101,7 @@ a:hover {
 }
 
 .site-header {
-  background: #E5DFC8;
+  background: var(--color-surface);
   border-block-end: 0.0625rem solid var(--color-border);
 }
 
@@ -114,7 +114,7 @@ a:hover {
 
 .brand {
   margin: 0;
-  color: var(--color-primary);
+  color: var(--color-primary-dark);
   font-size: 1.4rem;
   font-weight: 700;
 }
@@ -132,17 +132,16 @@ a:hover {
   display: inline-block;
   padding-block: 0.35rem;
   font-weight: 700;
-  color: var(--color-primary);
 }
 
 .nav-list a[aria-current="page"] {
-  color: var(--color-primary-dark);
+  color: var(--color-primary);
   text-decoration-thickness: 0.2em;
 }
 
 .hero {
   padding-block: clamp(3rem, 10vw, 7rem);
-  background: linear-gradient(135deg, #E5DFC8 0%, #EFEAD8 100%);
+  background: linear-gradient(135deg,rgb(229 223 200/ 95%), rgb(253 251 247/ 92%));
 }
 
 .hero-layout {
@@ -167,16 +166,15 @@ a:hover {
 
 .hero-panel {
   padding: 1.5rem;
-  border: 0.0625rem solid var(--color-primary-soft);
+  border: 0.0625rem solid var(--color-border);
   border-radius: var(--radius-large);
   background: var(--color-surface);
-  color: var(--color-text);
   box-shadow: var(--shadow-card);
 }
 
 .hero-panel strong {
   display: block;
-  color: var(--color-accent);
+  color: var(--color-primary-dark);
   font-size: 2rem;
 }
 
@@ -194,7 +192,7 @@ a:hover {
   border: 0.125rem solid var(--color-primary);
   border-radius: var(--radius-small);
   background: var(--color-primary);
-  color: var(--color-surface-text);
+  color: var(--color-surface);
   font: inherit;
   font-weight: 700;
   line-height: 1.2;
@@ -209,13 +207,12 @@ a:hover {
 
 .button-secondary {
   background: transparent;
-  color: var(--color-primary);
-  border-color: var(--color-primary);
+  color: var(--color-primary-dark);
 }
 
 .button-secondary:hover {
   background: var(--color-primary);
-  color: var(--color-surface-text);
+  color: var(--color-surface);
 }
 
 .section {
@@ -223,7 +220,7 @@ a:hover {
 }
 
 .section-alt {
-  background: #E5DFC8;
+  background: var(--color-surface);
 }
 
 .section-intro {
@@ -244,11 +241,7 @@ a:hover {
   border: 0.0625rem solid var(--color-border);
   border-radius: var(--radius-medium);
   background: var(--color-surface);
-  color: var(--color-text);
   box-shadow: var(--shadow-card);
-}
-.card p{
-  color: var(--color-muted);
 }
 
 .step-number {
@@ -258,7 +251,7 @@ a:hover {
   margin-block-end: 0.75rem;
   place-items: center;
   border-radius: 50%;
-  background: var(--color-accent);
+  background: var(--color-primary-soft);
   color: var(--color-primary-dark);
   font-weight: 700;
 }
@@ -270,7 +263,6 @@ a:hover {
   border: 0.0625rem solid var(--color-border);
   border-radius: var(--radius-medium);
   background: var(--color-surface);
-  color: var(--color-text);
   box-shadow: var(--shadow-card);
 }
 
@@ -292,9 +284,7 @@ a:hover {
 
 .offer-card__price {
   margin-block-start: auto;
-  font-size: 1.15rem;
-  color: var(--color-text);
-}
+  font-size: 1.15rem;}
 
 .offer-card__price strong {
   color: var(--color-accent);
@@ -317,11 +307,6 @@ a:hover {
   border-inline-start: 0.3rem solid var(--color-primary);
   border-radius: var(--radius-small);
   background: var(--color-primary-soft);
-  color: var(--color-text);
-}
-
-.notice h2 {
-  color: var(--color-primary-dark);
 }
 
 .page-heading {
@@ -332,10 +317,9 @@ a:hover {
   max-width: 56rem;
   margin-block-end: 3rem;
   padding: clamp(1rem, 4vw, 2rem);
-  border: 0.0625rem solid var(--color-primary-soft);
+  border: 0.0625rem solid var(--color-border);
   border-radius: var(--radius-large);
   background: var(--color-surface);
-  color: var(--color-text);
   box-shadow: var(--shadow-card);
 }
 
@@ -357,7 +341,6 @@ label {
   display: inline-block;
   margin-block-end: 0.35rem;
   font-weight: 700;
-  color: var(--color-primary-dark);
 }
 
 input,
@@ -365,10 +348,10 @@ select,
 textarea {
   width: 100%;
   padding: 0.7rem 0.75rem;
-  border: 0.0625rem solid var(--color-border);
+  border: 0.0625rem solid #7C879D;
   border-radius: var(--radius-small);
-  background: #FDFBF7;
-  color: var(--color-primary-dark);
+  background: var(--color-surface);
+  color: var(--color-text);
   font: inherit;
 }
 
@@ -379,8 +362,7 @@ textarea {
 input:focus,
 select:focus,
 textarea:focus {
-  border-color: var(--color-accent);
-  outline: 0.15rem solid var(--color-accent);
+  border-color: var(--color-primary-dark);
 }
 
 input[type="checkbox"],
@@ -388,7 +370,7 @@ input[type="radio"] {
   width: 1.1rem;
   height: 1.1rem;
   margin: 0.2rem 0 0;
-  accent-color: var(--color-accent);
+  accent-color: var(--color-primary);
 }
 
 .required-note {
@@ -398,11 +380,11 @@ input[type="radio"] {
 .site-footer {
   padding-block: 2rem;
   background: var(--color-primary-dark);
-  color: var(--color-surface-text);
+  color: var(--color-surface);
 }
 
 .site-footer a {
-  color: var(--color-accent);
+  color: var(--color-surface);
 }
 
 .footer-layout {
@@ -457,19 +439,16 @@ input[type="radio"] {
 .filter-panel {
   display: grid;
   gap: 1rem;
-  margin-block: 1.5rem;
+  margin-block-end: 1.5rem;
   padding: 1rem;
   border: 0.0625rem solid var(--color-border);
   border-radius: var(--radius-medium);
-  background: var(--color-primary);
+  background: var(--color-surface);
 }
 .filter-panel p {
   margin: 0;
 }
 
-.filter-panel label {
-  color: var(--color-surface-text);
-}
 .status-message{
   min-height: 1.6em;
   color: var(--color-muted);
